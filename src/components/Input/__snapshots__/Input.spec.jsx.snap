@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Input /> should match a snapshot 1`] = `
+.c1 {
+  width: 50%;
+  margin: 3rem 0 0 3rem;
+  padding: 10px;
+}
+
+.c0 {
+  color: white;
+  margin: 0 0 0 3rem;
+}
+
+<div>
+  <div
+    class=""
+  >
+    <h1
+      class="c0"
+    >
+      Search Value: 
+      What was typed
+    </h1>
+    <input
+      class="c1"
+      placeholder="Enter a value"
+      type="search"
+      value="What was typed"
+    />
+  </div>
+</div>
+`;

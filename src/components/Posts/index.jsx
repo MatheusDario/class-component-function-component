@@ -2,7 +2,7 @@
 import * as Styled from './styled';
 import { PostCard } from '../PostCard';
 
-export const Posts = ({ posts }) => (
+export const Posts = ({ posts = [] }) => (
   <Styled.Main>
     {posts.map((post) => (
       <PostCard

@@ -6,7 +6,12 @@ export const Input = ({ onChange, value, search }) => {
     <Styled.Container>
       {!!search && <Styled.Title>Search Value: {search}</Styled.Title>}
 
-      <Styled.Input value={value} onChange={onChange} type="search" />
+      <Styled.Input
+        placeholder="Enter a value"
+        value={value}
+        onChange={onChange}
+        type="search"
+      />
     </Styled.Container>
   );
 };
