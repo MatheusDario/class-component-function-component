@@ -1,7 +1,7 @@
-/* eslint-disable react/prop-types */
+import P from 'prop-types';
 import * as Styled from './styled';
 
-export const Button = ({ text, onClick, disabled }) => {
+export const Button = ({ text, onClick, disabled = false }) => {
   return (
     <Styled.Container>
       <Styled.Button disabled={disabled} onClick={onClick}>
@@ -9,4 +9,14 @@ export const Button = ({ text, onClick, disabled }) => {
       </Styled.Button>
     </Styled.Container>
   );
+};
+
+Button.defaultProps = {
+  disabled: false,
+};
+
+Button.propTypes = {
+  text: P.string.isRequired,
+  onClick: P.func.isRequired,
+  disabled: P.bool,
 };

@@ -1,4 +1,4 @@
-/* eslint-disable react/prop-types */
+import P from 'prop-types';
 import * as Styled from './styled';
 
 export const Input = ({ onChange, value, search }) => {
@@ -14,4 +14,10 @@ export const Input = ({ onChange, value, search }) => {
       />
     </Styled.Container>
   );
+};
+
+Input.propTypes = {
+  onChange: P.func.isRequired,
+  value: P.string.isRequired,
+  search: P.string.isRequired,
 };

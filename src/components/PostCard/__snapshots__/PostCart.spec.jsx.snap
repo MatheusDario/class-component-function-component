@@ -38,14 +38,20 @@ exports[`<PostCard /> shuld match snapshot 1`] = `
     class="c1"
   >
     <img
+      alt="title 1"
       class="c2"
+      src="img/img.png"
     />
     <h1
       class="c3"
-    />
+    >
+      title 1
+    </h1>
     <p
       class="c4"
-    />
+    >
+      body 1
+    </p>
   </div>
 </section>
 `;

@@ -1,4 +1,4 @@
-/* eslint-disable react/prop-types */
+import P from 'prop-types';
 import * as Styled from './styled';
 import { PostCard } from '../PostCard';
 
@@ -15,3 +15,14 @@ export const Posts = ({ posts = [] }) => (
     ))}
   </Styled.Main>
 );
+
+Posts.propTypes = {
+  posts: P.arrayOf(
+    P.shape({
+      cover: P.string.isRequired,
+      title: P.string.isRequired,
+      body: P.string.isRequired,
+      id: P.number,
+    }),
+  ),
+};

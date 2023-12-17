@@ -3,8 +3,8 @@ import { Input } from '.';
 import { renderTheme } from '../../styles/render-theme';
 
 const props = {
-  value: 'What was typed',
-  search: 'What was typed',
+  value: 'value',
+  search: 'value',
 };
 
 describe('<Input />', () => {
@@ -23,7 +23,13 @@ describe('<Input />', () => {
 
   it('should call handleChange on each key pressed', () => {
     const mockFuncion = jest.fn();
-    renderTheme(<Input onChange={mockFuncion} />);
+    renderTheme(
+      <Input
+        value={props.value}
+        search={props.search}
+        onChange={mockFuncion}
+      />,
+    );
     const input = screen.getByPlaceholderText(/Enter a value/i);
     const valueTyping = 'value';
 

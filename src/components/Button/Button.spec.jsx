@@ -3,7 +3,8 @@ const { Button } = require('.');
 
 describe('<Button />', () => {
   it('should render with a text "load more posts"', () => {
-    render(<Button text="load more posts" />);
+    const fn = jest.fn();
+    render(<Button onClick={fn} text="load more posts" />);
     const button = screen.getByRole('button', { name: 'load more posts' });
     expect(button).toBeInTheDocument();
   });
@@ -19,13 +20,15 @@ describe('<Button />', () => {
   });
 
   it('should desabled button when disabled for true ', () => {
-    render(<Button text="load more posts" disabled />);
+    const fn = jest.fn();
+    render(<Button disabled onClick={fn} text="load more posts" />);
     const button = screen.getByRole('button', { name: 'load more posts' });
     expect(button).toBeDisabled();
   });
 
   it('should enabled when disabled for false ', () => {
-    render(<Button text="load more posts" disabled={false} />);
+    const fn = jest.fn();
+    render(<Button onClick={fn} disabled={false} text="load more posts" />);
     const button = screen.getByRole('button', { name: 'load more posts' });
     expect(button).toBeEnabled();
   });

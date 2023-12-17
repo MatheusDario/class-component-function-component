@@ -1,4 +1,4 @@
-/* eslint-disable react/prop-types */
+import P from 'prop-types';
 import * as Styled from './styled';
 
 export function PostCard({ cover, title, body }) {
@@ -12,3 +12,9 @@ export function PostCard({ cover, title, body }) {
     </Styled.Section>
   );
 }
+
+PostCard.propTypes = {
+  cover: P.string.isRequired,
+  title: P.string.isRequired,
+  body: P.string.isRequired,
+};

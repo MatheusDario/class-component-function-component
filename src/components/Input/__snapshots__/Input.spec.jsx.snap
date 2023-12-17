@@ -20,13 +20,13 @@ exports[`<Input /> should match a snapshot 1`] = `
       class="c0"
     >
       Search Value: 
-      What was typed
+      value
     </h1>
     <input
       class="c1"
       placeholder="Enter a value"
       type="search"
-      value="What was typed"
+      value="value"
     />
   </div>
 </div>
